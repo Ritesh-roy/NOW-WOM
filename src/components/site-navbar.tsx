@@ -53,8 +53,8 @@ export function SiteNavbar() {
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="relative px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              className="nav-link relative px-4 py-2 text-sm font-medium text-muted-foreground"
+              activeProps={{ className: "text-foreground", "data-active": "true" }}
             >
               {l.label}
             </Link>
@@ -64,7 +64,7 @@ export function SiteNavbar() {
         <div className="hidden lg:block">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold transition-transform hover:-translate-y-0.5"
+            className="btn-gold inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             Get a Quote
           </Link>
@@ -96,7 +96,7 @@ export function SiteNavbar() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-gradient-gold px-5 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)]"
+              className="btn-gold mt-4 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold"
             >
               Get a Quote
             </Link>

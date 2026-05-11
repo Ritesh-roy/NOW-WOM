@@ -79,7 +79,7 @@ function HomePage() {
           <div className="animate-fade-up mt-10 flex flex-wrap gap-4">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold transition-transform hover:-translate-y-0.5"
+              className="group btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
             >
               Request a Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -123,13 +123,13 @@ function HomePage() {
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <div key={s.title} className="group glass hover-lift relative overflow-hidden rounded-2xl p-8">
+            <div key={s.title} className="group card-premium relative overflow-hidden rounded-2xl p-8 glass">
               <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "var(--gradient-radial-gold)" }} />
               <div className="relative">
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-gold shadow-gold">
                   <s.icon className="h-6 w-6 text-[oklch(0.16_0.045_260)]" />
                 </div>
-                <h3 className="mt-6 font-serif text-xl font-semibold">{s.title}</h3>
+                <h3 className="title-hover mt-6 font-serif text-xl font-semibold"><span className="title-underline">{s.title}</span></h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
                 <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-[var(--gold)]">
                   Learn more <ChevronRight className="h-4 w-4" />
@@ -180,7 +180,7 @@ function HomePage() {
                   </div>
                 ))}
               </div>
-              <Link to="/services" className="mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+              <Link to="/services" className="mt-10 btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
                 Explore Healthcare Services <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -273,7 +273,7 @@ function HomePage() {
                 placeholder="your@email.com"
                 className="flex-1 rounded-full border border-border bg-[oklch(0.21_0.05_260/0.7)] px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[var(--gold)] focus:outline-none"
               />
-              <button type="submit" className="rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+              <button type="submit" className="btn-gold rounded-full px-6 py-3 text-sm font-semibold">
                 Subscribe
               </button>
             </form>

@@ -126,7 +126,7 @@ function CareersPage() {
               </div>
               <div className="flex items-center gap-6">
                 <span className="flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="h-4 w-4 text-[var(--gold)]" />{r.location}</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-gradient-gold px-4 py-2 text-xs font-bold text-[oklch(0.16_0.045_260)] transition-transform group-hover:translate-x-1">
+                <span className="btn-gold inline-flex items-center gap-1 rounded-full px-4 py-2 text-xs font-bold">
                   Apply now <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
@@ -158,7 +158,7 @@ function CareersPage() {
             We're always interested in exceptional talent. Send your CV and we'll be in touch
             when the right opportunity opens.
           </p>
-          <a href="mailto:careers@aureliuslogistics.com" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+          <a href="mailto:careers@aureliuslogistics.com" className="mt-8 btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold">
             careers@aureliuslogistics.com <ArrowRight className="h-4 w-4" />
           </a>
         </div>

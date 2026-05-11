@@ -46,15 +46,15 @@ function IndustriesPage() {
       <Section>
         <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {industries.map((i) => (
-            <article key={i.title} className="group glass hover-lift overflow-hidden rounded-2xl border border-border">
-              <div className="relative aspect-[16/10] overflow-hidden">
+            <article key={i.title} className="group card-premium overflow-hidden rounded-2xl border border-border glass">
+              <div className="img-hover relative aspect-[16/10]">
                 <img src={i.image} alt={i.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.05_260)] via-[oklch(0.12_0.05_260/0.3)] to-transparent" />
                 <div className="absolute bottom-5 left-5 flex items-center gap-3">
                   <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-gold shadow-gold">
                     <i.icon className="h-5 w-5 text-[oklch(0.16_0.045_260)]" />
                   </div>
-                  <h3 className="font-serif text-2xl font-semibold">{i.title}</h3>
+                  <h3 className="title-hover font-serif text-2xl font-semibold"><span className="title-underline">{i.title}</span></h3>
                 </div>
               </div>
               <div className="p-7">
