@@ -14,6 +14,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as BranchesRouteImport } from './routes/branches'
@@ -43,6 +44,11 @@ const NewsRoute = NewsRouteImport.update({
 const IndustriesRoute = IndustriesRouteImport.update({
   id: '/industries',
   path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -77,6 +83,7 @@ export interface FileRoutesByFullPath {
   '/branches': typeof BranchesRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/industries': typeof IndustriesRoute
   '/news': typeof NewsRoute
   '/privacy': typeof PrivacyRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByTo {
   '/branches': typeof BranchesRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/industries': typeof IndustriesRoute
   '/news': typeof NewsRoute
   '/privacy': typeof PrivacyRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/branches': typeof BranchesRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/industries': typeof IndustriesRoute
   '/news': typeof NewsRoute
   '/privacy': typeof PrivacyRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/branches'
     | '/careers'
     | '/contact'
+    | '/cookies'
     | '/industries'
     | '/news'
     | '/privacy'
@@ -128,6 +138,7 @@ export interface FileRouteTypes {
     | '/branches'
     | '/careers'
     | '/contact'
+    | '/cookies'
     | '/industries'
     | '/news'
     | '/privacy'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/branches'
     | '/careers'
     | '/contact'
+    | '/cookies'
     | '/industries'
     | '/news'
     | '/privacy'
@@ -153,6 +165,7 @@ export interface RootRouteChildren {
   BranchesRoute: typeof BranchesRoute
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
   IndustriesRoute: typeof IndustriesRoute
   NewsRoute: typeof NewsRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -195,6 +208,13 @@ declare module '@tanstack/react-router' {
       path: '/industries'
       fullPath: '/industries'
       preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -241,6 +261,7 @@ const rootRouteChildren: RootRouteChildren = {
   BranchesRoute: BranchesRoute,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
   IndustriesRoute: IndustriesRoute,
   NewsRoute: NewsRoute,
   PrivacyRoute: PrivacyRoute,
