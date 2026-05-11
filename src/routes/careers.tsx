@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, ArrowRight, Sparkles, TrendingUp, Users, Heart } from "lucide-react";
+import {
+  MapPin, ArrowRight, Sparkles, TrendingUp, Users, Heart,
+  GraduationCap, Globe2, Plane, ShieldCheck, Coffee, Search, FileText, MessageSquare, Trophy,
+} from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Section, SectionHeader } from "@/components/section";
+import teamImg from "@/assets/team.jpg";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
       { title: "Careers — Aurelius Logistics" },
-      { name: "description", content: "Open roles, company culture, and growth opportunities at Aurelius Logistics." },
+      { name: "description", content: "Open roles, company culture, benefits, and growth opportunities at Aurelius Logistics." },
     ],
   }),
   component: CareersPage,
@@ -29,6 +33,22 @@ const perks = [
   { icon: Heart, title: "Wellbeing-first", desc: "Comprehensive healthcare, generous leave, and family-friendly policies." },
 ];
 
+const benefits = [
+  { icon: ShieldCheck, title: "Premium health insurance", desc: "Worldwide medical, dental, and vision for you and your family." },
+  { icon: GraduationCap, title: "Learning budget", desc: "$3,000/year for courses, certifications, and conferences." },
+  { icon: Plane, title: "Global mobility", desc: "Cross-office assignments and international relocation support." },
+  { icon: Globe2, title: "Hybrid by default", desc: "Flexible remote work paired with stunning physical hubs." },
+  { icon: Coffee, title: "Modern offices", desc: "Designed for focus, collaboration, and a great daily experience." },
+  { icon: Trophy, title: "Performance bonuses", desc: "Generous variable comp tied to clear, measurable outcomes." },
+];
+
+const process = [
+  { icon: Search, n: "01", t: "Discovery call", d: "A 30-minute conversation with our talent team to learn about you." },
+  { icon: FileText, n: "02", t: "Skills review", d: "A practical exercise or technical conversation tailored to the role." },
+  { icon: MessageSquare, n: "03", t: "Team interviews", d: "Meet your future manager and 2–3 future teammates." },
+  { icon: Trophy, n: "04", t: "Offer", d: "Detailed offer, onboarding plan, and your start date." },
+];
+
 function CareersPage() {
   return (
     <>
@@ -38,7 +58,30 @@ function CareersPage() {
         subtitle="Join a team where excellence is the standard, your work moves the world, and your growth is genuinely invested in."
       />
 
+      {/* CULTURE WITH IMAGE */}
       <Section>
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-3xl bg-gradient-gold opacity-20 blur-3xl" />
+            <img src={teamImg} alt="The Aurelius team" loading="lazy" className="relative rounded-3xl shadow-elegant" />
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-gradient-gold">Our culture</p>
+            <h2 className="mt-4 font-serif text-3xl font-semibold sm:text-4xl">Craft, character, and curiosity.</h2>
+            <p className="mt-5 leading-relaxed text-muted-foreground">
+              We hire people who care about doing exceptional work — not those chasing
+              titles or shortcuts. In return we offer real ownership, genuine investment in
+              your growth, and a team you'll be proud to call colleagues.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Whether you're orchestrating a 30-ton airlift or refining a global supply chain
+              strategy, your work here is felt across continents.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="!pt-0">
         <SectionHeader eyebrow="Why join us" title="A place to do the best work of your career" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {perks.map((p) => (
@@ -51,6 +94,23 @@ function CareersPage() {
         </div>
       </Section>
 
+      {/* BENEFITS */}
+      <Section className="!pt-0">
+        <SectionHeader eyebrow="Benefits" title={<>Generous, <span className="text-gradient-gold">global</span>, and grown-up</>} />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {benefits.map((b) => (
+            <div key={b.title} className="rounded-2xl border border-border p-7 transition-colors hover:border-[var(--gold)]">
+              <div className="grid h-11 w-11 place-items-center rounded-xl bg-[oklch(0.55_0.18_255/0.15)]">
+                <b.icon className="h-5 w-5 text-[var(--gold)]" />
+              </div>
+              <h3 className="mt-5 font-serif text-lg font-semibold">{b.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* OPEN ROLES */}
       <Section className="!pt-0">
         <SectionHeader eyebrow="Open roles" title="Find your next role" description="We hire for craft, character, and curiosity. If you don't see a perfect fit, we'd still love to hear from you." />
         <div className="overflow-hidden rounded-2xl border border-border glass">
@@ -66,8 +126,8 @@ function CareersPage() {
               </div>
               <div className="flex items-center gap-6">
                 <span className="flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="h-4 w-4 text-[var(--gold)]" />{r.location}</span>
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--gold)] transition-transform group-hover:translate-x-1">
-                  Apply <ArrowRight className="h-4 w-4" />
+                <span className="inline-flex items-center gap-1 rounded-full bg-gradient-gold px-4 py-2 text-xs font-bold text-[oklch(0.16_0.045_260)] transition-transform group-hover:translate-x-1">
+                  Apply now <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
             </a>
@@ -75,6 +135,22 @@ function CareersPage() {
         </div>
       </Section>
 
+      {/* HIRING PROCESS */}
+      <Section className="!pt-0">
+        <SectionHeader eyebrow="Hiring process" title="Respectful, focused, and quick" />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {process.map((s) => (
+            <div key={s.n} className="glass relative overflow-hidden rounded-2xl p-7">
+              <div className="font-serif text-5xl font-bold text-gradient-gold opacity-40">{s.n}</div>
+              <s.icon className="mt-4 h-7 w-7 text-[var(--gold)]" />
+              <h3 className="mt-4 font-serif text-lg font-semibold">{s.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* CTA */}
       <Section className="!pt-0">
         <div className="overflow-hidden rounded-3xl border border-border bg-gradient-hero p-10 text-center lg:p-16">
           <h2 className="font-serif text-3xl font-semibold sm:text-4xl">Don't see your role?</h2>
