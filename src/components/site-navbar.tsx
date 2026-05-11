@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Ship } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import womLogo from "@/assets/wom-logo.jpg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,15 +35,15 @@ export function SiteNavbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link to="/" className="group flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-gold shadow-gold">
-            <Ship className="h-5 w-5 text-[oklch(0.16_0.045_260)]" />
+          <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-lg bg-[oklch(0.12_0.05_260)] ring-1 ring-[var(--gold)]/40 shadow-gold">
+            <img src={womLogo} alt="WOM Solutions" className="h-full w-full object-cover" />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="font-serif text-lg font-semibold tracking-tight text-foreground">
-              Aurelius
+              WOM Solutions
             </span>
             <span className="text-[10px] uppercase tracking-[0.25em] text-gradient-gold">
-              Logistics
+              Logistics · Healthcare
             </span>
           </span>
         </Link>

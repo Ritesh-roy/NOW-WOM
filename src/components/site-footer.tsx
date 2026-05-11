@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Ship, Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import womLogo from "@/assets/wom-logo.jpg";
 
 const cols = [
   {
@@ -37,12 +38,12 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-5 lg:px-10">
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-gold">
-              <Ship className="h-5 w-5 text-[oklch(0.16_0.045_260)]" />
+            <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-lg ring-1 ring-[var(--gold)]/40">
+              <img src={womLogo} alt="WOM Solutions" className="h-full w-full object-cover" />
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="font-serif text-xl font-semibold">Aurelius</span>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-gradient-gold">Logistics</span>
+              <span className="font-serif text-xl font-semibold">WOM Solutions</span>
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gradient-gold">Logistics · Healthcare</span>
             </span>
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
