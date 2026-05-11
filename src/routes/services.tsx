@@ -53,11 +53,11 @@ function ServicesPage() {
           {services.map((s) => (
             <article
               key={s.title}
-              className={`group hover-lift relative overflow-hidden rounded-2xl border ${
+              className={`group card-premium relative overflow-hidden rounded-2xl border ${
                 s.featured ? "border-[var(--gold)] shadow-gold" : "border-border"
               } glass`}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="img-hover relative aspect-[16/10]">
                 <img
                   src={s.image}
                   alt={s.title}
@@ -75,7 +75,7 @@ function ServicesPage() {
                 )}
               </div>
               <div className="p-7">
-                <h3 className="font-serif text-2xl font-semibold">{s.title}</h3>
+                <h3 className="title-hover font-serif text-2xl font-semibold"><span className="title-underline">{s.title}</span></h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
                 <Link to="/contact" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--gold)] transition-transform group-hover:translate-x-1">
                   Learn more <ArrowRight className="h-4 w-4" />

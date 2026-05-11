@@ -123,13 +123,13 @@ function HomePage() {
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <div key={s.title} className="group glass hover-lift relative overflow-hidden rounded-2xl p-8">
+            <div key={s.title} className="group card-premium relative overflow-hidden rounded-2xl p-8 glass">
               <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "var(--gradient-radial-gold)" }} />
               <div className="relative">
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-gold shadow-gold">
                   <s.icon className="h-6 w-6 text-[oklch(0.16_0.045_260)]" />
                 </div>
-                <h3 className="mt-6 font-serif text-xl font-semibold">{s.title}</h3>
+                <h3 className="title-hover mt-6 font-serif text-xl font-semibold"><span className="title-underline">{s.title}</span></h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
                 <Link to="/services" className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-[var(--gold)]">
                   Learn more <ChevronRight className="h-4 w-4" />

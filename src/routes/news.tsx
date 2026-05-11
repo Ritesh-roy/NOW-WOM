@@ -33,7 +33,7 @@ function NewsPage() {
 
       <Section>
         <div className="mb-12 grid gap-8 lg:grid-cols-3">
-          <article className="glass hover-lift overflow-hidden rounded-3xl lg:col-span-2">
+          <article className="group card-premium overflow-hidden rounded-3xl glass lg:col-span-2">
             <div className="aspect-[16/9] bg-gradient-hero" />
             <div className="p-8">
               <div className="flex items-center gap-3 text-xs uppercase tracking-widest">
@@ -48,7 +48,7 @@ function NewsPage() {
 
           <div className="space-y-6">
             {articles.slice(1, 3).map((a) => (
-              <article key={a.title} className="glass hover-lift rounded-2xl p-6">
+              <article key={a.title} className="group card-premium rounded-2xl p-6 glass">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-widest">
                   <span className="text-[var(--gold)]">{a.tag}</span>
                   <span className="text-muted-foreground">{a.date}</span>
@@ -62,7 +62,7 @@ function NewsPage() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {articles.slice(3).map((a) => (
-            <article key={a.title} className="group glass hover-lift overflow-hidden rounded-2xl">
+            <article key={a.title} className="group card-premium overflow-hidden rounded-2xl glass">
               <div className="aspect-[16/10] bg-gradient-blue opacity-70" />
               <div className="p-6">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-widest">
