@@ -79,7 +79,7 @@ function HomePage() {
           <div className="animate-fade-up mt-10 flex flex-wrap gap-4">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold transition-transform hover:-translate-y-0.5"
+              className="group btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
             >
               Request a Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -180,7 +180,7 @@ function HomePage() {
                   </div>
                 ))}
               </div>
-              <Link to="/services" className="mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+              <Link to="/services" className="mt-10 btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
                 Explore Healthcare Services <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

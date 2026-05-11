@@ -99,7 +99,7 @@ function ServicesPage() {
                 trained in handling pharmaceuticals, biologics, vaccines, and clinical trial
                 materials.
               </p>
-              <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+              <Link to="/contact" className="mt-8 btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
                 Speak to a healthcare specialist <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

@@ -43,7 +43,7 @@ function ContactPage() {
                 and keep your cargo moving.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
-                <a href="tel:+97145550123" className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+                <a href="tel:+97145550123" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
                   Call us now <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href="mailto:hello@aureliuslogistics.com" className="text-sm font-semibold text-[var(--gold)]">
@@ -154,7 +154,7 @@ function ContactPage() {
                 </label>
                 <button
                   type="submit"
-                  className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold transition-transform hover:-translate-y-0.5"
+                  className="sm:col-span-2 btn-gold inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
                 >
                   Send inquiry <ArrowRight className="h-4 w-4" />
                 </button>

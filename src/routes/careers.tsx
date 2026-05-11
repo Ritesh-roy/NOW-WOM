@@ -158,7 +158,7 @@ function CareersPage() {
             We're always interested in exceptional talent. Send your CV and we'll be in touch
             when the right opportunity opens.
           </p>
-          <a href="mailto:careers@aureliuslogistics.com" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+          <a href="mailto:careers@aureliuslogistics.com" className="mt-8 btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold">
             careers@aureliuslogistics.com <ArrowRight className="h-4 w-4" />
           </a>
         </div>

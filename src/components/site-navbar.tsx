@@ -54,7 +54,7 @@ export function SiteNavbar() {
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
               className="nav-link relative px-4 py-2 text-sm font-medium text-muted-foreground"
-              activeProps={{ className: "text-foreground", "data-active": "true" } as React.HTMLAttributes<HTMLAnchorElement>}
+              activeProps={{ className: "text-foreground", "data-active": "true" }}
             >
               {l.label}
             </Link>
