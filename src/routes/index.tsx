@@ -4,6 +4,7 @@ import {
   Globe2, ShieldCheck, Clock, Award, Quote, ChevronRight, Snowflake, Pill, Activity,
 } from "lucide-react";
 import heroImg from "@/assets/hero-logistics.jpg";
+import heroVideo from "@/assets/hero-logistics.mp4.asset.json";
 import healthcareImg from "@/assets/healthcare.jpg";
 import globalImg from "@/assets/global.jpg";
 import { Section, SectionHeader } from "@/components/section";
@@ -49,13 +50,17 @@ function HomePage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Global logistics — container ship and cargo planes at twilight"
-            width={1920}
-            height={1080}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={heroImg}
+            aria-label="Global logistics — container ship and cargo planes at twilight"
             className="h-full w-full object-cover"
-          />
+          >
+            <source src={heroVideo.url} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-[linear-gradient(180deg,oklch(0.12_0.05_260/0.85)_0%,oklch(0.12_0.05_260/0.7)_45%,oklch(0.12_0.05_260)_100%)]" />
         </div>
 
