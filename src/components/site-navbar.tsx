@@ -33,28 +33,28 @@ export function SiteNavbar() {
         scrolled ? "glass shadow-elegant" : "bg-transparent",
       )}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link to="/" className="group flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-lg bg-[oklch(0.12_0.05_260)] ring-1 ring-[var(--gold)]/40 shadow-gold">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10 lg:py-4">
+        <Link to="/" className="group flex min-w-0 items-center gap-3">
+          <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-lg bg-[oklch(0.12_0.05_260)] ring-1 ring-[var(--gold)]/40 shadow-gold sm:h-11 sm:w-11">
             <img src={womLogo} alt="WOM Solutions" className="h-full w-full object-cover" />
           </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-serif text-lg font-semibold tracking-tight text-foreground">
+          <span className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate font-serif text-base font-semibold tracking-tight text-foreground sm:text-lg">
               WOM Solutions
             </span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-gradient-gold">
+            <span className="truncate text-[10px] uppercase tracking-[0.25em] text-gradient-gold">
               Logistics · Healthcare
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="nav-link relative px-4 py-2 text-sm font-medium text-muted-foreground"
+              className="nav-link relative px-3 py-2 text-sm font-medium text-muted-foreground"
               activeProps={{ className: "text-foreground", "data-active": "true" }}
             >
               {l.label}
@@ -62,7 +62,7 @@ export function SiteNavbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <Link
             to="/contact"
             className="btn-gold inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold"
@@ -74,14 +74,14 @@ export function SiteNavbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((o) => !o)}
-          className="grid h-10 w-10 place-items-center rounded-md border border-border text-foreground lg:hidden"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-border text-foreground xl:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="glass border-t border-border lg:hidden">
+        <div className="glass border-t border-border xl:hidden">
           <nav className="flex flex-col px-6 py-4">
             {links.map((l) => (
               <Link
