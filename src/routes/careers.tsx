@@ -126,7 +126,7 @@ function CareersPage() {
               </div>
               <div className="flex items-center gap-6">
                 <span className="flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="h-4 w-4 text-[var(--gold)]" />{r.location}</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-gradient-gold px-4 py-2 text-xs font-bold text-[oklch(0.16_0.045_260)] transition-transform group-hover:translate-x-1">
+                <span className="btn-gold inline-flex items-center gap-1 rounded-full px-4 py-2 text-xs font-bold">
                   Apply now <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>

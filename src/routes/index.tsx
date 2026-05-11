@@ -273,7 +273,7 @@ function HomePage() {
                 placeholder="your@email.com"
                 className="flex-1 rounded-full border border-border bg-[oklch(0.21_0.05_260/0.7)] px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[var(--gold)] focus:outline-none"
               />
-              <button type="submit" className="rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)] shadow-gold">
+              <button type="submit" className="btn-gold rounded-full px-6 py-3 text-sm font-semibold">
                 Subscribe
               </button>
             </form>

@@ -96,7 +96,7 @@ export function SiteNavbar() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-gradient-gold px-5 py-3 text-sm font-semibold text-[oklch(0.16_0.045_260)]"
+              className="btn-gold mt-4 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold"
             >
               Get a Quote
             </Link>
