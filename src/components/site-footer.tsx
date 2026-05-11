@@ -50,9 +50,9 @@ export function SiteFooter() {
             from industrial freight to temperature-sensitive pharmaceuticals.
           </p>
           <div className="mt-6 space-y-3 text-sm text-muted-foreground">
-            <p className="flex items-center gap-3"><MapPin className="h-4 w-4 text-[var(--gold)]" /> 1 Maritime Plaza, Dubai · UAE</p>
-            <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--gold)]" /> hello@aureliuslogistics.com</p>
-            <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-[var(--gold)]" /> +971 4 555 0123</p>
+            <p className="flex items-start gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" /> Janakpuri, West Delhi, Delhi 110058, India</p>
+            <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--gold)]" /> <a href="mailto:sales@womsolutions.in" className="hover:text-[var(--gold)]">sales@womsolutions.in</a></p>
+            <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-[var(--gold)]" /> <a href="tel:+919891210081" className="hover:text-[var(--gold)]">+91 98912 10081</a></p>
           </div>
         </div>
 
@@ -74,8 +74,12 @@ export function SiteFooter() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row lg:px-10">
-          <p>© {new Date().getFullYear()} Aurelius Logistics. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <p>© {new Date().getFullYear()} WOM Solutions. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link to="/privacy" className="hover:text-[var(--gold)]">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-[var(--gold)]">Terms of Service</Link>
+            <Link to="/cookies" className="hover:text-[var(--gold)]">Cookie Policy</Link>
+            <span className="hidden sm:inline text-border">|</span>
             <a href="#" aria-label="LinkedIn" className="hover:text-[var(--gold)]"><Linkedin className="h-4 w-4" /></a>
             <a href="#" aria-label="Twitter" className="hover:text-[var(--gold)]"><Twitter className="h-4 w-4" /></a>
             <a href="#" aria-label="Facebook" className="hover:text-[var(--gold)]"><Facebook className="h-4 w-4" /></a>

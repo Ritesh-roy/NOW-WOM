@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Clock, ArrowRight, Linkedin, Twitter, Facebook, In
 import { useState } from "react";
 import { PageHero } from "@/components/page-hero";
 import { Section } from "@/components/section";
+import { LocationMap } from "@/components/location-map";
 import supportImg from "@/assets/support.jpg";
 
 export const Route = createFileRoute("/contact")({
@@ -165,14 +166,7 @@ function ContactPage() {
       </Section>
 
       <Section className="!pt-0">
-        <div className="overflow-hidden rounded-3xl border border-border">
-          <iframe
-            title="Aurelius Logistics — Dubai Headquarters"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=55.18%2C25.18%2C55.32%2C25.27&amp;layer=mapnik"
-            className="h-[420px] w-full grayscale"
-            loading="lazy"
-          />
-        </div>
+        <LocationMap />
       </Section>
     </>
   );
