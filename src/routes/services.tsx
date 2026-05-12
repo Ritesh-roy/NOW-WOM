@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Plane, Ship, Truck, Warehouse, FileCheck, HeartPulse, PackageCheck,
-  Container, ArrowRight, Pill, Route as RouteIcon,
+  Plane, Ship, Truck, Warehouse, FileCheck, PackageCheck,
+  Container, ArrowRight, Route as RouteIcon,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Section, SectionHeader } from "@/components/section";
-import healthcareImg from "@/assets/healthcare.jpg";
 import airImg from "@/assets/svc-air.jpg";
 import seaImg from "@/assets/svc-sea.jpg";
 import roadImg from "@/assets/svc-road.jpg";
@@ -35,8 +34,6 @@ const services: Svc[] = [
   { icon: Truck, title: "Road Freight", image: roadImg, desc: "Cross-border trucking, FTL/LTL, and last-mile distribution across continents with GPS-monitored fleet, ATA carnet capability, and 24/7 dispatch." },
   { icon: Warehouse, title: "Warehousing", image: warehouseImg, desc: "Bonded, ambient, and climate-controlled storage in strategic global hubs — WMS-integrated, with pick & pack fulfillment and high-security vaulting." },
   { icon: FileCheck, title: "Customs Clearance", image: customsImg, desc: "In-house brokerage across major jurisdictions, AEO certified, with pre-clearance, duty drawback, and complete trade-compliance management." },
-  { icon: HeartPulse, title: "Healthcare Logistics", image: healthcareImg, desc: "GDP-certified cold chain from 2–8 °C through –80 °C for pharmaceuticals, biologics, vaccines, and medical devices — with 24/7 monitoring.", featured: true },
-  { icon: Pill, title: "Pharma Supply Chain", image: healthcareImg, desc: "End-to-end pharmaceutical supply chain design, clinical trial logistics, IRT integration, and global distribution to over 1,200 clinical sites." },
 ];
 
 function ServicesPage() {
@@ -83,27 +80,6 @@ function ServicesPage() {
               </div>
             </article>
           ))}
-        </div>
-      </Section>
-
-      <Section className="!pt-0">
-        <div className="overflow-hidden rounded-3xl border border-border bg-gradient-hero p-8 lg:p-14">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            <img src={healthcareImg} alt="Healthcare logistics" loading="lazy" className="rounded-2xl shadow-elegant" />
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-gradient-gold">Featured division</p>
-              <h2 className="mt-4 font-serif text-3xl font-semibold sm:text-4xl">Healthcare & Pharma — when temperature is non-negotiable.</h2>
-              <p className="mt-5 leading-relaxed text-muted-foreground">
-                Our dedicated life-sciences division operates a validated, GDP-compliant cold
-                chain network with 24/7 monitoring, redundant power, and qualified couriers
-                trained in handling pharmaceuticals, biologics, vaccines, and clinical trial
-                materials.
-              </p>
-              <Link to="/contact" className="mt-8 btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
-                Speak to a healthcare specialist <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
         </div>
       </Section>
 
