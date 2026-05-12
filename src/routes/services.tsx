@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Plane, Ship, Truck, Warehouse, FileCheck, HeartPulse, PackageCheck,
-  Container, ArrowRight, Pill, Route as RouteIcon,
+  Plane, Ship, Truck, Warehouse, FileCheck, PackageCheck,
+  Container, ArrowRight, Route as RouteIcon,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
