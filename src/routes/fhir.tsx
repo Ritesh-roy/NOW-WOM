@@ -4,6 +4,9 @@ import {
   RefreshCw, CheckCircle2, ArrowRight, MessageCircle, HeartPulse,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import {
+  Accordion, AccordionItem, AccordionTrigger, AccordionContent,
+} from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/fhir")({
   head: () => ({
@@ -213,9 +216,73 @@ function FhirPage() {
           </a>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section id="faq" className="px-6 pb-28">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">
+              FAQ
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-slate-600">
+              Quick answers about referrals, appointments, and how FHIR enables
+              secure data sharing between healthcare providers.
+            </p>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-sky-100 bg-white p-2 shadow-sm sm:p-4">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((f, i) => (
+                <AccordionItem
+                  key={f.q}
+                  value={`item-${i}`}
+                  className="border-b border-sky-100 last:border-b-0"
+                >
+                  <AccordionTrigger className="px-4 py-5 text-left text-base font-semibold text-slate-900 hover:no-underline sm:text-lg">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-5 text-sm leading-relaxed text-slate-600 sm:text-base">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
+const faqs = [
+  {
+    q: "What is a referral and why is it needed?",
+    a: "A referral is a formal request from your GP (general practitioner) asking a specialist to evaluate your condition. It ensures the specialist receives the right clinical context and your relevant medical history before the consultation.",
+  },
+  {
+    q: "How does FHIR help with appointments?",
+    a: "FHIR allows the GP's system and the specialist's system to exchange appointment details, patient demographics, and clinical notes in a standardized format. This removes manual paperwork and reduces scheduling errors.",
+  },
+  {
+    q: "Is my health data secure when shared via FHIR?",
+    a: "Yes. FHIR uses modern security standards including OAuth 2.0, TLS encryption, and granular access controls. Only authorized providers involved in your care can access the specific data they are permitted to view.",
+  },
+  {
+    q: "What information is shared between the GP and the specialist?",
+    a: "Typically your demographics, allergies, current medications, recent lab results, imaging reports, and the reason for referral. The specialist sends back their findings, diagnosis, and treatment plan after the visit.",
+  },
+  {
+    q: "Do I need to carry my reports physically?",
+    a: "No. When both providers use FHIR-enabled systems, your records flow electronically between them. You can simply attend your appointment and the specialist already has everything needed to begin care.",
+  },
+  {
+    q: "How quickly is the GP updated after a specialist visit?",
+    a: "Updates can be transmitted almost immediately once the specialist finalizes their notes. This keeps your primary care record accurate and helps your GP coordinate any follow-up care without delay.",
+  },
+];
 
 function FlowIllustration() {
   const nodes = [
