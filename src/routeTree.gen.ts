@@ -14,6 +14,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as FhirRouteImport } from './routes/fhir'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
@@ -44,6 +45,11 @@ const NewsRoute = NewsRouteImport.update({
 const IndustriesRoute = IndustriesRouteImport.update({
   id: '/industries',
   path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FhirRoute = FhirRouteImport.update({
+  id: '/fhir',
+  path: '/fhir',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CookiesRoute = CookiesRouteImport.update({
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/fhir': typeof FhirRoute
   '/industries': typeof IndustriesRoute
   '/news': typeof NewsRoute
   '/privacy': typeof PrivacyRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/fhir': typeof FhirRoute
   '/industries': typeof IndustriesRoute
   '/news': typeof NewsRoute
   '/privacy': typeof PrivacyRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/fhir': typeof FhirRoute
   '/industries': typeof IndustriesRoute
   '/news': typeof NewsRoute
   '/privacy': typeof PrivacyRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/cookies'
+    | '/fhir'
     | '/industries'
     | '/news'
     | '/privacy'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/cookies'
+    | '/fhir'
     | '/industries'
     | '/news'
     | '/privacy'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/cookies'
+    | '/fhir'
     | '/industries'
     | '/news'
     | '/privacy'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   CookiesRoute: typeof CookiesRoute
+  FhirRoute: typeof FhirRoute
   IndustriesRoute: typeof IndustriesRoute
   NewsRoute: typeof NewsRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -208,6 +221,13 @@ declare module '@tanstack/react-router' {
       path: '/industries'
       fullPath: '/industries'
       preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fhir': {
+      id: '/fhir'
+      path: '/fhir'
+      fullPath: '/fhir'
+      preLoaderRoute: typeof FhirRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cookies': {
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   CookiesRoute: CookiesRoute,
+  FhirRoute: FhirRoute,
   IndustriesRoute: IndustriesRoute,
   NewsRoute: NewsRoute,
   PrivacyRoute: PrivacyRoute,
@@ -271,3 +292,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
