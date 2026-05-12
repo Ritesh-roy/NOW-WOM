@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
-import womLogo from "@/assets/wom-logo.jpg";
+import womLogo from "@/assets/hlc-logo.png";
 
 const cols = [
   {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import womLogo from "@/assets/wom-logo.jpg";
+import womLogo from "@/assets/hlc-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
