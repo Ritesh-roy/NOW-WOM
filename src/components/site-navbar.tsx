@@ -37,11 +37,11 @@ export function SiteNavbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10 lg:py-4">
         <Link to="/" className="group flex min-w-0 items-center gap-3">
           <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-lg bg-[oklch(0.12_0.05_260)] ring-1 ring-[var(--gold)]/40 shadow-gold sm:h-11 sm:w-11">
-            <img src={womLogo} alt="WOM Solutions" className="h-full w-full object-cover" />
+            <img src={womLogo} alt="HLC Technologies" className="h-full w-full object-cover" />
           </span>
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate font-serif text-base font-semibold tracking-tight text-foreground sm:text-lg">
-              WOM Solutions
+              HLC Technologies
             </span>
             <span className="truncate text-[10px] uppercase tracking-[0.25em] text-gradient-gold">
               Logistics · Healthcare

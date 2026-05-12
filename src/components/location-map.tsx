@@ -4,8 +4,8 @@ import "leaflet/dist/leaflet.css";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const COMPANY = {
-  name: "WOM Solutions",
-  email: "sales@womsolutions.in",
+  name: "HLC Technologies",
+  email: "sales@hlctechnologies.in",
   phone: "+91 98912 10081",
   address: "Janakpuri, West Delhi, Delhi 110058, India",
   hq: { lat: 28.6219, lng: 77.0856 },

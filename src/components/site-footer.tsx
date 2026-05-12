@@ -39,10 +39,10 @@ export function SiteFooter() {
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center gap-3">
             <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-lg ring-1 ring-[var(--gold)]/40">
-              <img src={womLogo} alt="WOM Solutions" className="h-full w-full object-cover" />
+              <img src={womLogo} alt="HLC Technologies" className="h-full w-full object-cover" />
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="font-serif text-xl font-semibold">WOM Solutions</span>
+              <span className="font-serif text-xl font-semibold">HLC Technologies</span>
               <span className="text-[10px] uppercase tracking-[0.25em] text-gradient-gold">Logistics · Healthcare</span>
             </span>
           </Link>
@@ -52,7 +52,7 @@ export function SiteFooter() {
           </p>
           <div className="mt-6 space-y-3 text-sm text-muted-foreground">
             <p className="flex items-start gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" /> Janakpuri, West Delhi, Delhi 110058, India</p>
-            <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--gold)]" /> <a href="mailto:sales@womsolutions.in" className="hover:text-[var(--gold)]">sales@womsolutions.in</a></p>
+            <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--gold)]" /> <a href="mailto:sales@hlctechnologies.in" className="hover:text-[var(--gold)]">sales@hlctechnologies.in</a></p>
             <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-[var(--gold)]" /> <a href="tel:+919891210081" className="hover:text-[var(--gold)]">+91 98912 10081</a></p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export function SiteFooter() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row lg:px-10">
-          <p>© {new Date().getFullYear()} WOM Solutions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} HLC Technologies. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/privacy" className="hover:text-[var(--gold)]">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-[var(--gold)]">Terms of Service</Link>
