@@ -11,7 +11,7 @@ import {
 export const Route = createFileRoute("/fhir")({
   head: () => ({
     meta: [
-      { title: "FHIR Workflow — Healthcare Interoperability | WOM Solutions" },
+      { title: "FHIR Workflow — Healthcare Interoperability | HLC Technologies" },
       { name: "description", content: "Understand the FHIR-powered referral workflow from GP to specialist — secure, standardised, and real-time clinical data exchange." },
     ],
   }),

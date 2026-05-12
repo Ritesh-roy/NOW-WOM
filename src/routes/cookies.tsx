@@ -5,8 +5,8 @@ import { Section } from "@/components/section";
 export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
-      { title: "Cookie Policy — WOM Solutions" },
-      { name: "description", content: "How WOM Solutions uses cookies and similar tracking technologies." },
+      { title: "Cookie Policy — HLC Technologies" },
+      { name: "description", content: "How HLC Technologies uses cookies and similar tracking technologies." },
     ],
   }),
   component: CookiesPage,
@@ -29,7 +29,7 @@ function CookiesPage() {
       <Section className="!py-16">
         <div className="mx-auto max-w-3xl space-y-8 text-muted-foreground">
           <p className="leading-relaxed">
-            WOM Solutions uses cookies and similar technologies to operate our website,
+            HLC Technologies uses cookies and similar technologies to operate our website,
             understand how it is used, and provide a better experience. You can control
             non-essential cookies through your browser settings at any time.
           </p>
@@ -64,7 +64,7 @@ function CookiesPage() {
           <div>
             <h2 className="font-serif text-xl font-semibold text-foreground">Contact</h2>
             <p className="mt-3 leading-relaxed">
-              For questions about this Cookie Policy, contact sales@womsolutions.in or call +91 98912 10081.
+              For questions about this Cookie Policy, contact sales@hlctechnologies.in or call +91 98912 10081.
             </p>
           </div>
         </div>
