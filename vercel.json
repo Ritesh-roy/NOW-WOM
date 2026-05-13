@@ -1,14 +1,22 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/server",
+  "outputDirectory": "dist/client",
   "env": {
     "NODE_ENV": "production"
   },
   "regions": ["iad1"],
   "functions": {
-    "dist/server/index.js": {
-      "runtime": "@vercel/node@3.0.0",
-      "memory": 1024
+    "api/index.js": {
+      "runtime": "@vercel/edge@1.0.0"
     }
-  }
+  },
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/api/index.js"
+    }
+  ]
 }
