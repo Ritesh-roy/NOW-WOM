@@ -4,14 +4,5 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "regions": ["iad1"],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "^/(.*)$",
-      "dest": "/api/index.js"
-    }
-  ]
+  "regions": ["iad1"]
 }
